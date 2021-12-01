@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Basic input types</title>
+  <link rel="stylesheet" href="../css/simple_form.css">
+
+</head>
+
+<body>
+  <form>
+    <header class="headerContainer">
+      <h1>HTML 5 Form Input file fields</h1>
+    </header>
+    <div>
+      <label for="text">Text input for Name: </label>
+      <input type="text" id="text" name="text" placeholder="Enter the name.." required>
+      <error-output class="text-error" for="text"></error-output>
+    </div>
+    <div>
+      <label for="pwd">Password input type: </label>
+      <input type="password" id="pwd" name="pwd" placeholder="Enter password..">
+      <error-output class="pwd-error" for="pwd"></error-output>
+    </div>
+    <div>
+      <label for="emailInput">Email input type: </label>
+      <input type="email" id="emailInput" name="email" placeholder="Enter last name..">
+      <error-output class="email-error" for="emailInput"></error-output>
+    </div>
+    <div>
+      <label for="url">Url input type: </label>
+      <input type="url" id="Url" name="Url" placeholder="Enter Url..">
+      <error-output class="text-error" for="Url"></error-output>
+    </div>
+    <div>
+      <label for="number">Number input type: </label>
+      <input type="number" id="number" name="number" placeholder="Enter number..">
+      <error-output class="text-error" for="number"></error-output>
+    </div>
+    <div>
+      <label for="tel">Tel input type: </label>
+      <input type="tel" id="tel" name="tel" placeholder="Enter telephone number..">
+      <error-output class="phone-error" for="tel"></error-output>
+    </div>
+    <div>
+      <label for="search">Search input type: </label>
+      <input type="search" id="search" name="search" placeholder="Search hear..">
+      <error-output class="text-error" for="search"></error-output>
+    </div>
+    <div class="nativeDateTimePicker">
+      <label for="party">Choose a date and time: </label>
+      <input type="datetime-local" id="party" name="bday">
+      <span class="validity"></span>
+    </div>
+    <div>
+      <label for="salary">Choose Enter salary: </label>
+      <input type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000"
+        placeholder="Enter salary..">
+      <output class="salary-output" for="salary">400000 </output>
+    </div>
+    <div>
+      <button>Submit</button>
+    </div>
+  </form>
+  <script src="../jS/simple_form.js"></script>
+</body>
+
+</html>
