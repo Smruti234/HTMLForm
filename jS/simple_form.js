@@ -39,14 +39,20 @@ number.addEventListener('input',function(){
         errnumber.textContent="number is incorrect";
     }
 });
-//UC4: Password using Regex. 
+//uc5 password
 const pwd = document.querySelector("#pwd");
 const errPass = document.querySelector(".pwd-error");
-password.addEventListener('input',function(){
-    let passRegex = RegExp("^[a-zA-Z]){8}$");
-    if(passRegex.test(password.value)){
-        errPass.textContent="";
-    }else{
-        errPass.textContent="Password is incorrect";
-    }
+const pwdSucessfull = document.querySelector('.pwd-sucessfull');
+const pwdInput = document.querySelector('.pwd-input');
+pwd.addEventListener('input', function () {
+  let passRegex = RegExp("^([!@#$%^&*()]?[A-Za-z0-9]+){8,}$");
+  if (passRegex.test(pwd.value)) {
+    pwdSucessfull.textContent = "It's Ok";
+    pwdInput.style.backgroundColor = "#66cc66";
+    errPass.textContent = "";
+  } else {
+    pwdInput.style.backgroundColor = "#ff6666";
+    errPass.textContent = "Password is incorrect";
+  }
 });
+
