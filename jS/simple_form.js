@@ -16,6 +16,7 @@ text.addEventListener('input', function () {
     textError.textContent = "Name is Incorrect";
   }
 }); 
+//UC2
 const email = document.querySelector('#emailInput');
 const emailError = document.querySelector('.email-error');
 email.addEventListener('input',function(){
@@ -27,7 +28,7 @@ email.addEventListener('input',function(){
         emailError.textContent="Email is InValid";
     }
 });
-//UC3:Valid number Number enter Using Regex.
+//UC3:Valid number  enter Using Regex.
 const number = document.querySelector('#number');
 const errnumber = document.querySelector('.number-error');
 number.addEventListener('input',function(){
@@ -36,5 +37,16 @@ number.addEventListener('input',function(){
         errnumber.textContent="";
     }else{
         errnumber.textContent="number is incorrect";
+    }
+});
+//UC4: Password using Regex. 
+const pwd = document.querySelector("#pwd");
+const errPass = document.querySelector(".pwd-error");
+password.addEventListener('input',function(){
+    let passRegex = RegExp("^[a-zA-Z]){8}$");
+    if(passRegex.test(password.value)){
+        errPass.textContent="";
+    }else{
+        errPass.textContent="Password is incorrect";
     }
 });
