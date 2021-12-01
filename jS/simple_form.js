@@ -27,3 +27,14 @@ email.addEventListener('input',function(){
         emailError.textContent="Email is InValid";
     }
 });
+//UC3:Valid number Number enter Using Regex.
+const number = document.querySelector('#number');
+const errnumber = document.querySelector('.number-error');
+number.addEventListener('input',function(){
+    let numberRegex = RegExp('^[1-9]{2}[0-9]{10}$');
+    if(numberRegex.test(number.value)){
+        errnumber.textContent="";
+    }else{
+        errnumber.textContent="number is incorrect";
+    }
+});
